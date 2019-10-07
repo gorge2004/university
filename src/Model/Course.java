@@ -58,7 +58,14 @@ public class Course {
 
     @Override
     public String toString() {
+        String day = "";
+        for (int i = 0; i < days.size() ; i++) {
+            day += days.get(i)+"\n Start: "+starAt.get(i)+"\nFinish: "+finishAt
+                ;
+
+        }
         return super.toString()+"\nCourse: "+getName()
-                +"\nSection:"+getSection();
+                +"\nSection:"+getSection()
+                +"\n"+day;
     }
 }

@@ -9,7 +9,12 @@ public  class classSchedule {
         return coursesAvailable;
     }
 
-    public static void setCoursesAvailable(ArrayList<Course> coursesAvailable) {
-        classSchedule.coursesAvailable = coursesAvailable;
+    public static void setCoursesAvailable(Course coursesAvailable) {
+        classSchedule.coursesAvailable.add(coursesAvailable) ;
+    }
+    public static void showCourseSchedule(){
+        for (Course course : coursesAvailable){
+            System.out.println(course);
+        }
     }
 }
