@@ -27,7 +27,7 @@ public class Course {
         return finishAt;
     }
 
-    public void setFinishAt(String finishAt) {
+    public void addFinishAt(String finishAt) {
         this.finishAt.add(finishAt) ;
     }
 
@@ -60,11 +60,13 @@ public class Course {
     public String toString() {
         String day = "";
         for (int i = 0; i < days.size() ; i++) {
-            day += days.get(i)+"\n Start: "+starAt.get(i)+"\nFinish: "+finishAt
+            day += days.get(i)+"/"+days.get(i).getSpanish()+"\nStart: "+starAt.get(i)
+                    +"\nFinish: "+finishAt.get(i)+"\n"
                 ;
 
         }
-        return super.toString()+"\nCourse: "+getName()
+        //return super.toString();
+        return "\nCourse: "+getName()
                 +"\nSection:"+getSection()
                 +"\n"+day;
     }
