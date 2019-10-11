@@ -13,7 +13,16 @@ public class Course {
     ArrayList<String> starAt = new ArrayList<>();
     ArrayList<String> finishAt = new ArrayList<>();
     String section = "";
+
     ArrayList<Test> tests = new ArrayList<>();
+
+    public ArrayList<Test> getTests() {
+        return tests;
+    }
+
+    public void setTests(Test test) {
+        this.tests.add(test) ;
+    }
 
     public ArrayList<String> getStarAt() {
         return starAt;
