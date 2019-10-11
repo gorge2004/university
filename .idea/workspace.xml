@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9b179b3-b5a9-4116-bf73-5f3edae9960f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UDO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UDO/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UDO/Model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UDO/Model/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UDO/Model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UDO/Model/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UDO/Model/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UDO/Model/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UDO/util/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UDO/util/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/MenuTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/MenuTeacher.java" afterDir="false" />
-    </list>
+    <list default="true" id="d9b179b3-b5a9-4116-bf73-5f3edae9960f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
