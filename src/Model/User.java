@@ -89,7 +89,7 @@ public abstract class User {
         this.genre = genre;
     }
     public boolean isEmpty(){
-        return  getDni() == null ? true: false ;
+        return  getDni() == null  ;
     }
 
 }

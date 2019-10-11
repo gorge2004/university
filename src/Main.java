@@ -6,9 +6,6 @@ import util.Menu;
 import util.MenuAdmin;
 import util.MenuStudent;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
@@ -35,9 +32,6 @@ public class Main {
 
         }while (response != 0);
 
-        //MenuAdmin.showMenu();
-
-       // MenuStudent.ShowMenu();
 
 
     }

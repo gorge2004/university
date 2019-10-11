@@ -3,6 +3,7 @@ package util;
 import Model.Genre;
 import Model.Student;
 import Model.Teacher;
+import Model.User;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -71,13 +72,13 @@ public class Menu {
 
 
     }
-    public void loadTeacher() {
-        teachers.add(new Teacher("12345", "1234","Jorge","es","1","20/04/1993", Genre.Male) );
-        teachers.add(new Teacher("123456","1234","nicolas","verde","1","20/04/1992", Genre.Male) );
-        teachers.add(new Teacher("12345","1234","julio","valle","1","20/04/1995", Genre.Male) );
-        teachers.add(new Teacher("12345","1234","Jorge","lifstic","1","20/04/1994", Genre.Male) );
-        teachers.add(new Teacher("12345","1234","Carla","solano","1","20/04/1998", Genre.Female) );
-        teachers.add(new Teacher("1235","1234","Maria","salgado","1","20/04/1999", Genre.Female) );
+    public static void loadTeacher() {
+        teachers.add(new Teacher("12345", "1234","Jorge","es","2","20/04/1993", Genre.Male) );
+        teachers.add(new Teacher("123456","1234","nicolas","verde","2","20/04/1992", Genre.Male) );
+        teachers.add(new Teacher("12345","1234","julio","valle","2","20/04/1995", Genre.Male) );
+        teachers.add(new Teacher("12345","1234","Jorge","lifstic","2","20/04/1994", Genre.Male) );
+        teachers.add(new Teacher("12345","1234","Carla","solano","2","20/04/1998", Genre.Female) );
+        teachers.add(new Teacher("1235","1234","Maria","salgado","2","20/04/1999", Genre.Female) );
 
 
     }
@@ -112,6 +113,39 @@ public class Menu {
 
         }while (!correctUser);
         return  correctUser;
+    }
+    public static  boolean loginTeacher(){
+        loadTeacher();
+        ArrayList<Teacher> users = teachers;
+        String dni = "";
+        String password = "";
+        boolean correctUser = false;
+        do {
+            System.out.println("Type your DNI(EXIT to return)");
+            dni = Menu.listenDataText(4);
+
+            if (dni.equals("EXIT")){
+                break;
+
+            }
+            System.out.println("Type your Password");
+            password = Menu.listenDataText(4);
+
+            for (Teacher user :  users){
+                if(user.getDni().equals(dni) ){
+                    correctUser = user.getPassword().equals(password);
+                    if(!correctUser){
+                        System.out.println("Invalid password");
+                    }else {
+                        teacherLogged = user;
+                    }
+                    break;
+                }
+            }
+
+        }while (!correctUser);
+        return  correctUser;
+
     }
 
 }
