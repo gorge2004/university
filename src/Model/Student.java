@@ -1,6 +1,6 @@
 package Model;
 
-public class Student extends User {
+public class Student extends User implements CRUDSemester  {
     private int lvl = 1;
 
     public Semester getSemester() {
