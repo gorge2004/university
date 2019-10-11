@@ -39,6 +39,11 @@ public class MenuAdmin {
         }while ( response != 0   );
 
     }
+
+    public static ArrayList<Course> getCourses() {
+        return courses;
+    }
+
     public static  Course getCourse(int i){
         return courses.get(i);
     }
@@ -176,7 +181,12 @@ public class MenuAdmin {
         }while ( txt.length()< min);
         return txt;
     }
-    public static void showCourse(){
-        courses.stream().forEach(course -> System.out.println(course) );
+    public static int showCourse(){
+
+        AtomicInteger counter = new AtomicInteger(1);
+        courses.stream().forEach(course -> System.out.println(counter.getAndIncrement()+"- "+course)
+        );
+        return courses.size();
+
     }
 }

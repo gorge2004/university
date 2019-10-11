@@ -1,14 +1,26 @@
 package Model;
 
-public class User {
+public abstract class User {
 
 
     private String dni;
+    private Genre genre;
+
+    public User(String dni, String name, String lastName, String type, String birthday, Genre genre) {
+        this.setDni(dni);
+        this.setName(name);
+        this.setLastName( lastName);
+        this.setType(type);
+        this.setBirthday(birthday);
+        this.setGenre(genre);
+    }
+
     private String name;
     private String lastName;
     private String type;
     private String birthday;
     private String startAt;
+
 
     public String getDni() {
         return dni;
@@ -56,6 +68,12 @@ public class User {
     public void setStartAt(String startAt) {
         this.startAt = startAt;
     }
+    public Genre getGenre() {
+        return genre;
+    }
 
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
 
 }

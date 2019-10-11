@@ -1,9 +1,15 @@
 package Model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Semester {
     private ArrayList<Course> courses = new ArrayList<>();
-    private  ArrayList<Teacher> teachers = new ArrayList<>();
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public void addCourses(Course course) {
+        this.courses.add(course)  ;
+    }
 }
