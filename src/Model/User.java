@@ -5,14 +5,27 @@ public abstract class User {
 
     private String dni;
     private Genre genre;
+    private String password;
 
-    public User(String dni, String name, String lastName, String type, String birthday, Genre genre) {
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public User(String dni, String password, String name, String lastName, String type, String birthday, Genre genre) {
         this.setDni(dni);
         this.setName(name);
         this.setLastName( lastName);
         this.setType(type);
         this.setBirthday(birthday);
         this.setGenre(genre);
+        this.setPassword(password);
+    }
+    public User(){
+
     }
 
     private String name;
@@ -74,6 +87,9 @@ public abstract class User {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
+    }
+    public boolean isEmpty(){
+        return  getDni() == null ? true: false ;
     }
 
 }

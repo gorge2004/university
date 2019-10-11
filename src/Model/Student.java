@@ -14,9 +14,10 @@ public class Student extends User {
     private Semester semester = new Semester();
 
 
-    public Student(String dni, String name, String lastName, String type, String birthday, Genre genre) {
-        super(dni, name, lastName, type, birthday, genre);
+    public Student(String dni, String password, String name, String lastName, String type, String birthday, Genre genre) {
+        super(dni, password, name, lastName, type, birthday, genre);
     }
+
 
     public int getLvl() {
         return lvl;

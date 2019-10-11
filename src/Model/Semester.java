@@ -12,4 +12,7 @@ public class Semester {
     public void addCourses(Course course) {
         this.courses.add(course)  ;
     }
+    public void deleteCourse(int index){
+        courses.remove(index);
+    }
 }
