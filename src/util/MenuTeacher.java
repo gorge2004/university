@@ -1,5 +1,7 @@
 package util;
 
+import Model.Test;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class MenuTeacher {
@@ -9,12 +11,13 @@ public class MenuTeacher {
         boolean login =  Menu.teacherLogged != null || Menu.loginTeacher();
         if (login){
             do {
-                System.out.println("Welcome "+Menu.studentLogged.getName()+" , select a valid option");
+                System.out.println("Welcome "+Menu.teacherLogged.getName()+" , select a valid option");
                 System.out.println("1- register a course.");
                 System.out.println("2- Delete a course.");
                 System.out.println("3- show your courses");
+                System.out.println("4- add test to Course");
                 System.out.println("0- return");
-                response = Menu.listenDataNumber(0,1,3);
+                response = Menu.listenDataNumber(0,1,4);
                 System.out.println(response);
                 switch (response){
                     case 1 :
@@ -26,6 +29,8 @@ public class MenuTeacher {
                     case 3:
                         showCourses();
                         break;
+                    case 4:
+                        addTest();
 
                 }
 
@@ -34,6 +39,8 @@ public class MenuTeacher {
 
 
     }
+
+
 
     private static void removeCourse() {
         int response = -1, numberCourse = 0;
@@ -57,7 +64,7 @@ public class MenuTeacher {
         AtomicInteger counter = new AtomicInteger(1);
         Menu.teacherLogged.getSemester().getCourses().stream().forEach( course ->  System.out.println( counter.getAndIncrement()+" - "+course ) );
 
-        return Menu.studentLogged.getSemester().getCourses().size();
+        return Menu.teacherLogged.getSemester().getCourses().size();
     }
 
     private static void addCourse() {
@@ -67,5 +74,30 @@ public class MenuTeacher {
         Menu.teacherLogged.addCourse( MenuAdmin.getCourse(response - 1));
         System.out.println("Ready!");
         ShowMenu();
+    }
+    private static void addTest() {
+        int response = -1, numberCourse = 0;
+        do {
+            System.out.println("Which course would you like to add?");
+            numberCourse = showCourses();
+            System.out.println("0- Return");
+            response = Menu.listenDataNumber(0,0, numberCourse);
+            int aux = -1;
+            Test test = new Test();
+            if (response != 0){
+                do {
+                    System.out.println("type your question");
+                    String question = Menu.listenDataText(5);
+                    test.addQuestion(question);
+                    System.out.println("do you want exit?");
+                    System.out.println("0- Yes");
+                    System.out.println("1- no");
+                    aux = Menu.listenDataNumber(0,0,1);
+                }while (aux != 0);
+                Menu.teacherLogged.getSemester().getCourses().get((response-1)).setTests(test);
+            }
+
+
+        }while (response != 0 );
     }
 }

@@ -5,6 +5,7 @@ import Model.Student;
 import util.Menu;
 import util.MenuAdmin;
 import util.MenuStudent;
+import util.MenuTeacher;
 
 
 public class Main {
@@ -26,6 +27,10 @@ public class Main {
                 case 2:
                     MenuStudent.ShowMenu();
                     break;
+
+                case 3:
+                    MenuTeacher.ShowMenu();
+
 
             }
 

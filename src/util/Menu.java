@@ -13,7 +13,7 @@ public class Menu {
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Teacher> teachers = new ArrayList<>();
     static Student studentLogged ;
-    static Teacher teacherLogged =  new Teacher();
+    static Teacher teacherLogged;
 
     public static int listenDataNumber(int breakCond, int from, int to){
         int response = -1;
